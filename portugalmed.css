@@ -1,0 +1,464 @@
+/*TAGS GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+
+}
+
+/*CABEÇALHO*/
+header {
+    background-color:#ff3131;
+
+}
+
+.loja{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo {
+    padding: 15px 10px 0px 50px;
+    width: 70px;
+    text-align: center;
+
+}
+
+.titulo {
+    padding: 10px 10px 0px 5px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+
+}
+
+.container-tags{
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+
+}
+
+.container-tags a{
+    text-decoration: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    color: white;
+
+}
+
+.container-tags a:hover{
+    display: inline-block;
+    transform: scale(1.2);
+
+}
+
+/*SOBRE A LOJA*/
+.section-sobre {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 10px;
+    
+}
+
+.section-sobre p {
+    color: rgb(0, 0, 0);
+    padding: 7px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+h2 {
+    color: black;
+    padding: 2px 0px 0px 10px;
+
+}
+
+/*PRODUTOS DA LOJA*/
+.section-produtos {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 10px;
+
+}
+
+.section-produtos p{
+    padding: 5px 0px 5px 10px;
+    
+}
+
+
+.listas, li{
+    padding: 0px 0px 3px 4px;
+    color: black;
+    margin: 0px 0px 0px 12px;
+
+}
+
+/*INFORMAÇÕES DA LOJA*/
+.section-local {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 20px 10px;
+
+}
+
+.grid-local {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*separei em duas colunas em linha*/
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.texto-local h2 {
+    color: black;
+    padding: 10px;
+}
+
+/*CONTATOS DA LOJA*/
+.section-contato {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 10px;
+
+}
+
+.redes{
+    color: black;
+    padding-bottom: 10px;
+
+}
+
+.redes li {
+    display: flex;
+    color: black;
+    padding: 10px 0px 0px 20px;
+    
+}
+
+.redes li span{
+    color: black;
+
+}
+
+.redes img {
+    width: 20px;
+    padding-right: 10px;
+
+}
+
+.redes a{
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+}
+
+.section-email {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 10px;
+
+}
+
+/*FORMULÁRIO*/
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 0px 10px;
+}
+
+
+form input, form textarea{
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px; 
+    border-color: black;
+
+}
+
+form button {
+    align-self: flex-end;
+    padding:10px; /* engordei o botao*/
+    width: 100px; /* usei pra diminuir o botao*/
+    background-color: #28a745;
+    color: #fff;
+    border: none; /* tirei borda galera*/
+    cursor: pointer;
+    margin: 10px;
+}
+
+/*RODAPÉ*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff3131;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+
+
+/* MENU MOBILE JAVA SCRIPT*/
+
+.btn-abrir-menu i{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.menu-mobile{
+    background-color: #ff3131;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.801);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+
+}
+
+.menu-mobile.abrir-menu{
+    width: 75%;
+
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+
+}
+
+.menu-mobile .btn-fechar i{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+
+}
+
+.menu-mobile div ul{
+    text-align: right;
+    list-style: none;
+
+}
+
+.menu-mobile div ul li a{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+    text-decoration: none;
+
+}
+
+.menu-mobile div ul li a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+
+}
+
+/*CARROSEL DE IMAGENS*/
+.slider {
+    margin: 0 auto;
+    width: 500px;
+    height: 330px;
+    overflow: hidden;
+
+}
+
+.slides {
+    width: 400%;
+    height: 300px;
+    display: flex;
+
+}
+
+.slides input {
+    display: none;
+
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 1s;
+
+}
+
+.slide img {
+    width: 600px;
+    height: 400px;
+
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 500px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+
+}
+
+#radio1:checked ~ .firts {
+    margin-left: -0;
+
+}
+
+#radio2:checked ~ .firts {
+    margin-left: -25%;
+
+}
+
+#radio3:checked ~ .firts {
+    margin-left: -50%;
+
+}
+
+.navigation-auto div {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 500px;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right:  30px;
+
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
+
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff;
+
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff;
+
+}
+
+
+/*RESPONSIVIDADE*/
+@media screen and (min-width: 1020px){
+.btn-abrir-menu i{
+    display: none;
+}
+}
+
+@media screen and (max-width: 1020px){
+.logo{
+    width: 60px;
+
+}
+
+.titulo{
+font-size: 25px;
+
+}
+
+.menu-mobile.abrir-menu{
+    width: 75%;
+    height: 100%;
+
+}
+
+.btn-abrir-menu i{
+    font-size: 50px;
+
+}
+
+.container-tags{
+    display: none;
+
+}
+
+.grid-local {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+
+}
+    
+.texto-local h2 {
+    color: black;
+    padding: 10px;
+    position: absolute;
+}
+
+.mapa{
+    width: 98%;
+    margin-top: 10px;
+
+}
+
+.slider{
+    gap: 10px;
+    width: 100%;
+
+}
+
+}
